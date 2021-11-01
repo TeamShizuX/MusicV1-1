@@ -34,14 +34,14 @@ class Config:
     ADMIN = os.environ.get("ADMINS", '')
     SUDO = [int(admin) for admin in (ADMIN).split()] # Exclusive for heroku vars configuration.
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
-    API_ID = int(os.environ.get("API_ID", ''))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
-    SESSION = os.environ.get("SESSION_STRING", "")
+    API_ID = int(os.environ.get("API_ID", "5948661"))
+    API_HASH = os.environ.get("API_HASH", "ed081430c75f3e0b9a95b3b5d461fa73")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "1959390723:AAFBpLbyf23KMoinLpp0fKlsjsG5DvowBGc")     
+    SESSION = os.environ.get("SESSION_STRING", "BQBM24AXRGME-p0tcr5j5hxFw3wzRWf7af4CrQHqdS1zGtzopjn3E6_3t8Um9uIwjsFAZeU10JaXyQ15Anye-N-aK8h-0LwSNeuPfbqW2Eq8qSsnuVLZzV4ngR903vI1FhBycvO95g8Wxst0yo0TjjSxxEavAfkPz6y3TZuAmRUNBZe0OU98CTwcTJwMM44aZ8qSUDFvne9_JWkfzDhHA6Xe39-SnWWaDPNAUwy6Myxb1fFXNW6Ay0UY72hRt085P0_-EWsHwd6qQ7VnAAjkCqzUKYtHUKVun0f8uk-3Mq-qpBQxKKugPTz-KM10c9zAN-k7heLBVbP-iljglDhCHaTjabm5JwA")
 
     #Stream Chat and Log Group
-    CHAT = int(os.environ.get("CHAT", ""))
-    LOG_GROUP=os.environ.get("LOG_GROUP", "")
+    CHAT = int(os.environ.get("CHAT", "-1001177194507"))
+    LOG_GROUP=os.environ.get("LOG_GROUP", "-1001177194507")
 
     #Stream 
     STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
