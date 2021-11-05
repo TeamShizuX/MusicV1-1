@@ -44,7 +44,7 @@ class Config:
     LOG_GROUP=os.environ.get("LOG_GROUP", "-1001543572778")
 
     #Stream 
-    STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
+    STREAM_URL=os.environ.get("STARTUP_STREAM", "http://live.siyathatv.lk:19904/hls/siyatha_tv.m3u8?25")
    
     #Database
     DATABASE_URI=os.environ.get("DATABASE_URI", None)
