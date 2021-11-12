@@ -36,7 +36,7 @@ class Config:
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
     API_ID = int(os.environ.get("API_ID", "5948661"))
     API_HASH = os.environ.get("API_HASH", "ed081430c75f3e0b9a95b3b5d461fa73")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "2061614513:AAGsgyzZDPET7XxaqesbsfuJV_c7TuyxOfE")     
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "2078405671:AAE6YOqbhyx2hBYX0FkGtjIlO3PTaGA4iMc")     
     SESSION = os.environ.get("SESSION_STRING", "BQBLDJTmcUOedZdFbsdbIvXvv06GtiKPUNEW70M_M_FHzJk02p9RJ7PUw9PReGUU6JagmJmkZX7UVqxyJAYQ5kzi04AqHhEDAJd3hJq1uSU26Lf-ECNykdNVBs3gBxiz2Kgeb2UjTLwAJrM1yobKdD1Qu1HybB5o5sQNPxDqLMDCIXImhZzMuNzwRMKyrHVlpfKodhjrz7Da-n6uXfqm1_DI6GjXayJK-hx5N2NM3P6A0NGQTEod9yeBu1kOz-IOisBaM0OLroIIBztR_9q84kC8T2uK-PsJr__a7BgTCP0goqAojDEyUtD1aumM0AnEM1_ki0IPcal_LPBPhhVWswiWdETsCQA")
 
     #Stream Chat and Log Group
@@ -44,7 +44,7 @@ class Config:
     LOG_GROUP=os.environ.get("LOG_GROUP", "-1001543572778")
 
     #Stream 
-    STREAM_URL=os.environ.get("STARTUP_STREAM", " http://212.102.60.40:2200/EX/starsports1hd-in/index.m3u8")
+    STREAM_URL=os.environ.get("STARTUP_STREAM", "http://live.siyathatv.lk:19904/hls/siyatha_tv.m3u8?25")
    
     #Database
     DATABASE_URI=os.environ.get("DATABASE_URI", None)
