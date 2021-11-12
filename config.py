@@ -52,8 +52,8 @@ class Config:
 
 
     #heroku
-    API_KEY=os.environ.get("HEROKU_API_KEY", None)
-    APP_NAME=os.environ.get("HEROKU_APP_NAME", None)
+    API_KEY=os.environ.get("HEROKU_API_KEY", "552b09bb-6eb3-465d-920b-c53894f6d6f0")
+    APP_NAME=os.environ.get("HEROKU_APP_NAME", "kingdommusicbotv1")
 
 
     #Optional Configuration
