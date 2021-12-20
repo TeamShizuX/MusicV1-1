@@ -9,6 +9,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
 COPY requirements.txt /requirements.txt
 RUN cd /
 RUN pip3 install -U -r requirements.txt
+RUN pip3 install -U pyrogram tgcrypto
 RUN mkdir /MusicV1
 WORKDIR /MusicV1
 COPY start.sh /start.sh
