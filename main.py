@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-# Copyright (C) @subinps
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 from utils import (
     play, 
     start_stream,
@@ -87,9 +73,14 @@ async def main():
                 LOGGER.info("Loop play enabled , starting playing startup stream.")
                 await start_stream()
     except Exception as e:
-        LOGGER.error(f"Startup was unsuccesfull, Errors - {e}", exc_info=True)
-        LOGGER.info("Activating debug mode, you can reconfigure your bot with /env command.")
-        Config.STARTUP_ERROR=f"Startup was unsuccesfull, Errors - {e}"
+        if "unpack requires" in str(e):
+            LOGGER.error("You Have to generate a new session string from the link given in README of the repo and replace the existing one with the new.")
+            LOGGER.info("Activating debug mode, you can reconfigure your bot with /env command.")
+            Config.STARTUP_ERROR=f"You Have to generate a new session string from the link given in README of the repo and replace the existing one with the new. \nGenerate string session from https://repl.it/@subinps/getStringName"
+        else:
+            LOGGER.error(f"Startup was unsuccesfull, Errors - {e}", exc_info=True)
+            LOGGER.info("Activating debug mode, you can reconfigure your bot with /env command.")
+            Config.STARTUP_ERROR=f"Startup was unsuccesfull, Errors - {e}"
         from utils import debug
         await bot.stop()
         await debug.start()
@@ -101,6 +92,5 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.get_event_loop().run_until_complete(main())
-
 
 
