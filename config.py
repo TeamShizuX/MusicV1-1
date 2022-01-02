@@ -36,8 +36,8 @@ class Config:
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
     API_ID = int(os.environ.get("API_ID", "5948661"))
     API_HASH = os.environ.get("API_HASH", "ed081430c75f3e0b9a95b3b5d461fa73")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "2129255915:AAHnx6zOAq8DP7m8_zmZG3_bLJQn3TlWiLo")     
-    SESSION = os.environ.get("SESSION_STRING", "BQBmxdnksfV7YaRDv7DXoWaQVh9w3QMvwOPMP0G8who_YMyohXh3JDlJULKfuMuEAJOCs-fb4eOiLtaarxHohWXdgIXiVwXFKbSxXLGwqnyGeP63kulx9TWoR1ef01FALW2zsCA9e88H7WSs4wBKJfRpneCyHKShhxAexgA2cb1Rx3Wl2HfygFz5e3IPXkbYjBB10GJ2pDjAtPGhMUtKl1VmbgSnQPuJ41-ZvgQKUTPlSTTM1bAKFZ0qDlXjGJbiVx7-PwkoMHuH5vw1c1B1NvSPy8ZmI4iuZhfAzoe65pSft685O0Ufbv92FdfdhgLp-oSU_P1vlXAw15kojpVZnNJfdETsCQA")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
+    SESSION = os.environ.get("SESSION_STRING", "")
 
     #Stream Chat and Log Group
     CHAT = int(os.environ.get("CHAT", "-1001543572778"))
@@ -48,7 +48,7 @@ class Config:
    
     #Database
     DATABASE_URI=os.environ.get("DATABASE_URI", "mongodb://mongo:73epkpnB6111YelujdMR@containers-us-west-7.railway.app:6136")
-    DATABASE_NAME=os.environ.get("DATABASE_NAME", "VCPlayerBot")
+    DATABASE_NAME=os.environ.get("DATABASE_NAME", "StreamHeroBot")
 
 
     #heroku
